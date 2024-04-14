@@ -20,8 +20,9 @@ const router = createBrowserRouter([
                 loader: ()=> fetch('/info.json')
             },
             {
-                path: '/details',
-                element: <PrivateRouts><EstateDetails></EstateDetails></PrivateRouts>
+                path: '/details/:id',
+                element: <PrivateRouts><EstateDetails></EstateDetails></PrivateRouts>,
+                loader: ()=> fetch('/info.json')
             },
             {
                 path: '/register',

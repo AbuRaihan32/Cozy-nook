@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 const EstateCard = ({ info }) => {
-    const { estate_title, price, location, area, facilities, image, status, beds, baths } = info;
+    const { estate_title, price, location, area, facilities, image, status, beds, baths, id } = info;
     return (
         <div
             data-aos="zoom-in"
@@ -50,7 +50,7 @@ const EstateCard = ({ info }) => {
 
 
                 <div className="card-actions mt-4">
-                    <Link to={'/details'} className="btn w-full bg-orange-600 rounded-none text-white px-6 hover:bg-orange-700">View Property</Link>
+                    <Link to={`/details/${id}`} className="btn w-full bg-orange-600 rounded-none text-white px-6 hover:bg-orange-700">View Property</Link>
                 </div>
             </div>
         </div>

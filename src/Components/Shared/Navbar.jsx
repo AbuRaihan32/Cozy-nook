@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
+import { RiEye2Line } from "react-icons/ri";
 
 const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
-
-    console.log(user);
 
     const NavLinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
@@ -35,7 +34,7 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">HOME SOLUTIONS</a>
+                <a className="btn btn-ghost text-3xl font-bold">CozyN <span className="text-3xl flex gap-0 -mr-2 -ml-2 font-extrabold text-orange-600"><RiEye2Line></RiEye2Line> <RiEye2Line></RiEye2Line></span> K</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
