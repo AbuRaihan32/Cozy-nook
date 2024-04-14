@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-import { useContext } from 'react';
-import { FaGoogle, FaTwitter, FaGithub } from "react-icons/fa";
+import { useContext, useState } from 'react';
+import { FaGoogle, FaTwitter, FaGithub, FaEye } from "react-icons/fa";
+import { RiEyeCloseFill } from "react-icons/ri";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { useForm } from "react-hook-form"
 import { updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+    const [show, setShow] = useState(false);
+    const Navigate = useNavigate();
 
-    const { createUserByEmail } = useContext(AuthContext);
+    const { createUserByEmail, logOutUser } = useContext(AuthContext);
 
     const {
         register,
@@ -22,11 +26,17 @@ const Register = () => {
         // create User
         createUserByEmail(email, password)
             .then(result => {
-
                 // Update User Profile
                 updateProfile(result.user, {
                     displayName: FullName, photoURL: image
                 })
+
+                // logOut User 
+                logOutUser()
+                    .then(() => { })
+                    .catch(() => { })
+                Navigate('/login')
+
                 console.log(result.user);
             })
             .catch(error => {
@@ -55,9 +65,15 @@ const Register = () => {
                     <input type="text" name="image" id="image" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("image")} />
 
                 </div>
-                <div className="space-y-1 text-sm">
+                <div className="space-y-1 text-sm relative">
                     <label htmlFor="password" className="block text-[18px]">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })} />
+                    <input type={show? 'text' : 'password'} name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })} />
+                    
+                    <div onClick={() => setShow(!show)} className="absolute right-5 top-[35px] text-xl">
+                        {
+                            show ? <FaEye></FaEye> : <RiEyeCloseFill></RiEyeCloseFill>
+                        }
+                    </div>
                     {errors.password && <span className="text-red-500 font-bold">This field is required</span>}
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-gray-100 bg-orange-500 font-bold btn hover:bg-orange-700">Register</button>

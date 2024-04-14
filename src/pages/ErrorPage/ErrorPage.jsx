@@ -12,7 +12,7 @@ const ErrorPage = () => {
                             <i>{error.statusText || error.message}</i>
                         </p>
                         <p className="mt-4 mb-8 ">{error.data || 'But dont worry, you can find plenty of other things on our homepage.'}</p>
-                        <Link to={'/'} className="px-8 py-3 font-semibold rounded bg-violet-400 text-gray-900">Back to homepage</Link>
+                        <Link to={'/'} className="px-8 py-3 font-semibold rounded bg-orange-600 hover:bg-orange-700 text-white">Back to homepage</Link>
                     </div>
                 </div>
             </section>

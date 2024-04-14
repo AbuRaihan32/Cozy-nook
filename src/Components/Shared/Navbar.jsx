@@ -1,25 +1,25 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Navbar = () => {
-    const {user, logOutUser } = useContext(AuthContext);
+    const { user, logOutUser } = useContext(AuthContext);
 
     console.log(user);
 
     const NavLinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/login'}>login</NavLink></li>
-        <li><NavLink to={'/register'}>Register</NavLink></li>
+        <li><NavLink to={'/contact'}>Contact</NavLink></li>
+        <li><NavLink to={'/about'}>About</NavLink></li>
     </>
 
 
     const signOutBtnHandler = () => {
         logOutUser()
-            .then(()=>{
+            .then(() => {
                 console.log('Sign Out Successfully');
             })
-            .catch(error =>{
+            .catch(error => {
                 console.log(error);
             })
     }
@@ -43,9 +43,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign In</a>
 
-                <button onClick={signOutBtnHandler} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign Out</button>
+                {
+                    user ? 
+                    <>
+                        <div className="avatar mr-5">
+                            <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src={user.photoURL} />
+                            </div>
+                        </div>
+                        <button onClick={signOutBtnHandler} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign Out</button>
+                    </> :
+                        <Link to={'/login'} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign In</Link>
+                }
+
+
+
             </div>
         </div>
     );
