@@ -1,30 +1,39 @@
 import { Link } from "react-router-dom";
 import { useContext } from 'react';
-import { FaGoogle, FaTwitter, FaGithub  } from "react-icons/fa";
+import { FaGoogle, FaTwitter, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { useForm } from "react-hook-form"
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-    const {createUserByEmail} = useContext(AuthContext);
+
+    const { createUserByEmail } = useContext(AuthContext);
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm();
-      
-      
-      const onSubmit = (data) => {
-        const { FullName, email, password} = data;
+    } = useForm();
 
+
+    const onSubmit = (data) => {
+        const { FullName, email, password, image } = data;
+
+        // create User
         createUserByEmail(email, password)
-        .then(result =>{
-            console.log(result.user);
-        })
-        .catch(error =>{
-            console.error(error)
-        })
-      }
+            .then(result => {
+
+                // Update User Profile
+                updateProfile(result.user, {
+                    displayName: FullName, photoURL: image
+                })
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
+    }
 
 
     return (
@@ -38,17 +47,17 @@ const Register = () => {
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="Email" className="block text-[18px]">Email</label>
-                    <input type="email" name="email" id="Email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("email", { required: true })}/>
+                    <input type="email" name="email" id="Email" placeholder="Your Email" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("email", { required: true })} />
                     {errors.email && <span className="text-red-500 font-bold">This field is required</span>}
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="image" className="block text-[18px]">Photo</label>
-                    <input type="text" name="image" id="image" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("image")}/>
+                    <input type="text" name="image" id="image" placeholder="Photo URL" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("image")} />
 
                 </div>
                 <div className="space-y-1 text-sm">
                     <label htmlFor="password" className="block text-[18px]">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })}/>
+                    <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })} />
                     {errors.password && <span className="text-red-500 font-bold">This field is required</span>}
                 </div>
                 <button className="block w-full p-3 text-center rounded-sm text-gray-100 bg-orange-500 font-bold btn hover:bg-orange-700">Register</button>
