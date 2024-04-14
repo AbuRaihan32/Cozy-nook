@@ -40,8 +40,18 @@ const EstateDetails = () => {
                             </div>
 
 
-                            <div className="flex justify-between mt-4">
-                                <p className="flex items-center gap-2 text-[18px] font-semibold"> <IoLocation className="text-orange-600"></IoLocation> {location}</p>
+                            <div className="md:flex justify-between mt-4">
+                                <p className="flex flex-col md:flex-row  gap-2 text-[18px] font-semibold">
+                                    <span className='flex items-center gap-2'>
+                                        <IoLocation className="text-orange-600"></IoLocation>
+                                        <span className='text-xl font-bold'>Location:</span>
+                                    </span>
+                                    <span className='ml-10 md:ml-0'>
+                                        {location}
+                                    </span>
+                                </p>
+
+                                <p><span className='text-xl font-bold'>Segment Name :</span> <span className='text-xl'>{segment_name}</span></p>
                             </div>
 
                             <div>

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { useNavigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 
@@ -12,6 +13,7 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
     const Navigate = useNavigate()
     const [show, setShow] = useState(false);
+    const location = useLocation();
 
     const { loginUser } = useContext(AuthContext);
     const {
@@ -26,7 +28,7 @@ const Login = () => {
 
         loginUser(email, password)
             .then(() => {
-                Navigate('/')
+                Navigate(location.state ? location.state : '/');
             })
             .catch(error => {
                 console.error(error)
@@ -48,9 +50,9 @@ const Login = () => {
                 </div>
                 <div className="space-y-1 text-sm relative">
                     <label htmlFor="password" className="block text-[18px]">Password</label>
-                    <input type={show? 'text' : 'password'} name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })} />
+                    <input type={show ? 'text' : 'password'} name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border border-orange-500 outline-none" {...register("password", { required: true })} />
 
-                    <div onClick={()=>setShow(!show)} className="absolute right-5 top-[35px] text-xl">
+                    <div onClick={() => setShow(!show)} className="absolute right-5 top-[35px] text-xl">
                         {
                             show ? <FaEye></FaEye> : <RiEyeCloseFill></RiEyeCloseFill>
                         }

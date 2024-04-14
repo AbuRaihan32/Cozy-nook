@@ -8,7 +8,12 @@ const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
 
     const NavLinks = <>
-        <li><NavLink className={({isActive}) => isActive ? 'bg-orange-600 text-white hover:bg-orange-700': ''} to={'/'}>Home</NavLink></li>
+        <li><NavLink className={({ isActive }) => isActive ? 'border border-orange-600 hover:bg-orange-200 rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/'}>Home</NavLink></li>
+
+        {
+            user && <li><NavLink className={({ isActive }) => isActive ? 'border border-orange-600 hover:bg-orange-200 rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/update'}>Update Profile</NavLink></li>
+        }
+
         <li><NavLink to={'/contact'}>Contact</NavLink></li>
         <li><NavLink to={'/about'}>About</NavLink></li>
     </>
@@ -38,25 +43,25 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl font-bold">CozyN <span className="text-3xl flex gap-0 -mr-2 -ml-2 font-extrabold text-orange-600"><RiEye2Line></RiEye2Line> <RiEye2Line></RiEye2Line></span> K</a>
+                <a className="btn btn-ghost text-3xl font-bold">CozyN <span className="text-3xl flex -mr-2 -ml-2 font-extrabold text-orange-600"><RiEye2Line></RiEye2Line><RiEye2Line className="-ml-[2px]"></RiEye2Line></span> K</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu-horizontal px-1 gap-5 items-center font-semibold">
                     {NavLinks}
                 </ul>
             </div>
             <div className="navbar-end">
 
                 {
-                    user ? 
-                    <>
-                        <div className="avatar mr-5">
-                            <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src={user.photoURL} />
+                    user ?
+                        <>
+                            <div title={`${user.displayName}`} className="avatar mr-5">
+                                <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src={user?.photoURL ? user.photoURL : '/public/icons8-user.gif'} />
+                                </div>
                             </div>
-                        </div>
-                        <button onClick={signOutBtnHandler} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign Out</button>
-                    </> :
+                            <button onClick={signOutBtnHandler} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign Out</button>
+                        </> :
                         <Link to={'/login'} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign In</Link>
                 }
 

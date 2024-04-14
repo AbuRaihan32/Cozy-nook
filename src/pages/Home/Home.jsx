@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>CozyNook || Home</title>
+                <title>Cozy | Home</title>
             </Helmet>
             <div className="w-[92%] mx-auto h-[50%] rounded-3xl">
                 <Banner></Banner>
