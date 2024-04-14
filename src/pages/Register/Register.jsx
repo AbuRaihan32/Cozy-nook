@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
     return (
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100">
+        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100 mt-8">
             <h1 className="text-2xl font-bold text-center">Create Your Account</h1>
             <form noValidate="" action="" className="space-y-6">
                 <div className="space-y-1 text-sm">

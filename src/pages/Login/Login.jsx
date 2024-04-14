@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
     return (
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100">
+        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100 mt-8">
             <h1 className="text-2xl font-bold text-center">Login</h1>
             <form noValidate="" action="" className="space-y-6">
                 <div className="space-y-1 text-sm">
@@ -16,7 +16,7 @@ const Login = () => {
                         <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                     </div>
                 </div>
-                <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-orange-500">Sign in</button>
+                <button className="block w-full p-3 text-center rounded-sm text-white bg-orange-500">Sign in</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
                 <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>

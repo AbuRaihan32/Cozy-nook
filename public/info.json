@@ -1,0 +1,165 @@
+[
+    {
+        "estate_title": "Luxury Villa with Ocean View",
+        "id": "1",
+        "segment_name": "Residential",
+        "description": "Experience luxury living in this stunning villa overlooking the ocean. This magnificent villa boasts spacious rooms flooded with natural light, offering the perfect blend of elegance and comfort. Step into the grand foyer and be greeted by soaring ceilings and exquisite architectural details. The expansive living area features floor-to-ceiling windows that frame breathtaking ocean vistas, while the gourmet kitchen is a chef's dream, equipped with top-of-the-line appliances and sleek finishes. Retreat to the master suite, where panoramic ocean views create a serene oasis, complete with a spa-like ensuite bathroom and spacious walk-in closet. Entertain guests in style on the ocean view terrace, take a dip in the sparkling swimming pool, or unwind in the private home theater. Located in the prestigious coastal enclave of Malibu, this villa offers the ultimate retreat for those seeking unparalleled luxury and refinement.",
+        "price": "$2,500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Malibu, California",
+        "facilities": [
+            "swimming pool",
+            "ocean view terrace",
+            "gym",
+            "home theater"
+        ],
+        "image": "https://i.ibb.co/7zdrRy1/house-1477041-1280.jpg",
+        "beds": 5,
+        "baths": 6
+    },
+    {
+        "estate_title": "Cozy Family Home",
+        "id": "2",
+        "segment_name": "Residential",
+        "description": "Welcome to your new cozy family home, where comfort meets convenience. Nestled in a tranquil suburban neighborhood in Seattle, this charming residence offers the perfect retreat for family living. Step inside and be greeted by a warm and inviting ambiance, with spacious interiors adorned with stylish finishes and modern amenities. The heart of the home is the well-appointed kitchen, featuring sleek appliances and ample counter space, ideal for preparing delicious meals and creating lasting memories with loved ones. Relax and unwind in the cozy living area, complete with a crackling fireplace, perfect for chilly evenings. Retreat to the private backyard oasis, where lush greenery and a spacious patio offer the ideal setting for outdoor entertaining and leisure. With three bedrooms, including a luxurious master suite, and two bathrooms, this home provides ample space for the whole family to live and grow. Conveniently located near schools, parks, and shopping, this family-friendly home offers the best of suburban living.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "Suburban neighborhood, Seattle",
+        "facilities": [
+            "backyard",
+            "fireplace",
+            "modern kitchen"
+        ],
+        "image": "https://i.ibb.co/gRFvDJC/house-1867187-1280.jpg",
+        "beds": 3,
+        "baths": 2
+    },
+    {
+        "estate_title": "Urban Loft Apartment",
+        "id": "3",
+        "segment_name": "Residential",
+        "description": "Experience the epitome of urban living in this stylish loft apartment located in the heart of New York City's vibrant downtown. Boasting industrial-chic design elements, including exposed brick walls and high ceilings, this sophisticated residence offers a unique blend of luxury and character. The open-concept living space is flooded with natural light, creating an inviting atmosphere for both relaxation and entertaining. Step outside onto your private rooftop terrace and take in sweeping views of the iconic city skyline, or head downstairs to the state-of-the-art gym for a workout session. With two spacious bedrooms, including a master suite with ensuite bathroom, this loft provides ample space for urban dwellers seeking a refined living experience. Conveniently situated near world-class dining, shopping, and entertainment options, this urban oasis offers the ultimate in cosmopolitan living.",
+        "price": "$10,000",
+        "status": "rent",
+        "area": "1800 sq ft",
+        "location": "Downtown, New York City",
+        "facilities": [
+            "open floor plan",
+            "rooftop terrace",
+            "gym"
+        ],
+        "image": "https://i.ibb.co/z4QW1RZ/lake-192990-1280.jpg",
+        "beds": 2,
+        "baths": 2
+    },
+    {
+        "estate_title": "Modern Condo with City Views",
+        "id": "4",
+        "segment_name": "Residential",
+        "description": "Embrace the energy of downtown living in this sleek and modern condo located in the heart of Chicago's vibrant city center. Boasting panoramic views of the iconic skyline, this sophisticated residence offers a luxurious urban retreat for discerning buyers. Floor-to-ceiling windows flood the open-concept living space with natural light, creating an inviting ambiance for both relaxation and entertainment. Step outside onto your private balcony and take in breathtaking vistas of the city below, or head downstairs to the fitness center for a workout session. With two spacious bedrooms, including a master suite with ensuite bathroom, this condo provides ample space for residents to live and thrive in the heart of the city. With world-class dining, shopping, and entertainment options just steps away, this is urban living at its finest.",
+        "price": "$900,000",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "Downtown, Chicago",
+        "facilities": [
+            "city view balcony",
+            "fitness center",
+            "concierge service"
+        ],
+        "image": "https://i.ibb.co/zSGXjMy/cottage-2955582-1280.jpg",
+        "beds": 2,
+        "baths": 2
+    },
+    {
+        "estate_title": "Rustic Countryside Retreat",
+        "id": "5",
+        "segment_name": "Residential",
+        "description": "Escape the hustle and bustle of city life and retreat to this charming countryside getaway nestled in the heart of Vermont's picturesque landscape. Surrounded by lush greenery and serene natural beauty, this rustic retreat offers a peaceful sanctuary for those seeking refuge from the stresses of modern living. Step inside and be greeted by the warmth of exposed wooden beams and a cozy wood-burning fireplace, creating a welcoming ambiance for relaxation and rejuvenation. The wraparound porch provides the perfect spot to savor your morning coffee while taking in sweeping views of the surrounding countryside, or gather around the fire pit with loved ones for an evening of storytelling under the stars. With three bedrooms and two bathrooms, including a spacious master suite, this retreat offers ample space for family and friends to unwind and reconnect amidst the tranquility of nature.",
+        "price": "$6,000",
+        "status": "rent",
+        "area": "3000 sq ft",
+        "location": "Rural area, Vermont",
+        "facilities": [
+            "wraparound porch",
+            "wood-burning fireplace",
+            "scenic views"
+        ],
+        "image": "https://i.ibb.co/wKHJ3F5/3d-electric-car-building.jpg",
+        "beds": 3,
+        "baths": 2
+    },
+    {
+        "estate_title": "Luxury Penthouse",
+        "id": "6",
+        "segment_name": "Residential",
+        "description": "Elevate your lifestyle with this unparalleled luxury penthouse situated in the heart of Miami's exclusive waterfront district. Boasting sweeping views of the glistening bay and skyline, this exquisite residence offers a refined oasis for discerning buyers seeking the epitome of sophistication and style. Step inside and be greeted by a grand foyer leading to a spacious open-concept living area, adorned with floor-to-ceiling windows that frame panoramic vistas of the surrounding landscape. The gourmet kitchen is a chef's dream, featuring top-of-the-line appliances and sleek designer finishes, while the expansive master suite offers a private sanctuary with a spa-like ensuite bathroom and generous walk-in closet. Unwind in the private rooftop pool overlooking the glittering city skyline, or host lavish soirées on the spacious terrace, complete with outdoor seating and dining areas. With four bedrooms and five bathrooms, including a luxurious guest suite, this penthouse redefines luxury living in the heart of Miami.",
+        "price": "$3,000,000",
+        "status": "sale",
+        "area": "4000 sq ft",
+        "location": "Waterfront, Miami",
+        "facilities": [
+            "private rooftop pool",
+            "spacious terrace",
+            "home automation system"
+        ],
+        "image": "https://i.ibb.co/vHNyGND/night-architecture-outdoors-dusk-building-exterior-tree-grass-illuminated-generative-ai.jpg",
+        "beds": 4,
+        "baths": 5
+    },
+    {
+        "estate_title": "Family-Friendly Suburban Home",
+        "id": "7",
+        "segment_name": "Residential",
+        "description": "Settle down and create lasting memories in this spacious family-friendly home nestled in a peaceful suburban neighborhood in Dallas. Boasting ample space and modern amenities, this residence offers the perfect blend of comfort and convenience for family living. Step inside and discover a bright and airy interior, featuring stylish finishes and a versatile floor plan designed to accommodate the needs of a growing family. The heart of the home is the well-appointed kitchen, equipped with sleek appliances and ample counter space, perfect for preparing delicious meals and entertaining guests. Retreat to the private backyard oasis, where lush landscaping and a spacious patio provide the ideal setting for outdoor gatherings and leisure activities. With four bedrooms, including a luxurious master suite, and three bathrooms, this home offers plenty of space for the whole family to live and thrive in a tranquil suburban setting.",
+        "price": "$5,000",
+        "status": "rent",
+        "area": "2800 sq ft",
+        "location": "Suburban neighborhood, Dallas",
+        "facilities": [
+            "backyard",
+            "modern kitchen",
+            "home office"
+        ],
+        "image": "https://i.ibb.co/cDx0Q5j/modern-residential-district-with-green-roof-balcony-generated-by-ai.jpg",
+        "beds": 4,
+        "baths": 3
+    },
+    {
+        "estate_title": "Contemporary Townhouse",
+        "id": "8",
+        "segment_name": "Residential",
+        "description": "Experience contemporary living at its finest in this stylish townhouse located in the heart of San Francisco's bustling city center. Boasting sleek design and smart technology, this sophisticated residence offers the perfect blend of style and convenience for modern urban dwellers. Step inside and be greeted by a light-filled interior, featuring clean lines and high-end finishes throughout. The open-concept living space is ideal for both relaxing and entertaining, with seamless transitions between the living, dining, and kitchen areas. Step outside onto the private rooftop deck and take in panoramic views of the city skyline, or host al fresco dinners under the stars. With three bedrooms, including a luxurious master suite, and four bathrooms, this townhouse provides ample space for residents to live, work, and entertain in style. With easy access to world-class dining, shopping, and entertainment options, this is city living at its best.",
+        "price": "$750,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "City center, San Francisco",
+        "facilities": [
+            "private garage",
+            "rooftop deck",
+            "smart home features"
+        ],
+        "image": "https://i.ibb.co/CMC0jgr/2150790340.jpg",
+        "beds": 3,
+        "baths": 4
+    },
+    {
+        "estate_title": "Lakefront Cottage",
+        "id": "9",
+        "segment_name": "Residential",
+        "description": "Escape to your own private sanctuary with this charming lakefront cottage nestled along the pristine shores of Minnesota's breathtaking lakeside landscape. Surrounded by towering trees and stunning water views, this rustic retreat offers a serene escape from the hustle and bustle of everyday life. Step inside and be greeted by a cozy interior featuring exposed wooden beams and a wood-burning fireplace, perfect for warming up on chilly evenings. The open-concept living space is ideal for both relaxation and entertaining, with ample room for family and friends to gather and create lasting memories. Step outside onto the private dock and soak in the natural beauty of the tranquil lake, or gather around the fire pit for cozy evenings under the stars. With two bedrooms and one bathroom, including a spacious master suite, this cottage provides the perfect setting for lakeside living and outdoor adventure.",
+        "price": "$3,000",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Lakefront, Minnesota",
+        "facilities": [
+            "private dock",
+            "fire pit",
+            "scenic views"
+        ],
+        "image": "https://i.ibb.co/ZLcxnK0/150246.jpg",
+        "beds": 2,
+        "baths": 1
+    }
+]
