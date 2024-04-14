@@ -2,12 +2,13 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { RiEye2Line } from "react-icons/ri";
+import { Helmet } from "react-helmet-async";
 
 const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
 
     const NavLinks = <>
-        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? 'bg-orange-600 text-white hover:bg-orange-700': ''} to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/contact'}>Contact</NavLink></li>
         <li><NavLink to={'/about'}>About</NavLink></li>
     </>
@@ -25,6 +26,9 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-base-100">
+            <Helmet>
+                <title>CozyNook | Login</title>
+            </Helmet>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -6,6 +6,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { useForm } from "react-hook-form"
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const [show, setShow] = useState(false);
@@ -48,6 +49,9 @@ const Register = () => {
 
     return (
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100 mt-8">
+            <Helmet>
+                <title>Cozy | Register</title>
+            </Helmet>
             <h1 className="text-2xl font-bold text-center">Create Your Account</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="space-y-1 text-sm">

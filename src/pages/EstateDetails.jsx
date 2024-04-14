@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { BiSolidArea } from 'react-icons/bi';
 import { FaBath } from 'react-icons/fa';
 import { FaCircleChevronRight } from 'react-icons/fa6';
@@ -18,6 +19,9 @@ const EstateDetails = () => {
 
     return (
         <div className="p-5 mx-auto sm:p-10 md:p-16">
+            <Helmet>
+                <title>Cozy | Details</title>
+            </Helmet>
             <div className="flex flex-col overflow-hidden rounded">
                 <div className='h-[calc(100vh-40vh)] '>
                     <img src={image} alt="" className="w-full h-full bg-gray-500" />
@@ -30,7 +34,7 @@ const EstateDetails = () => {
                             </div>
 
 
-                            <div className="flex items-center justify-between">
+                            <div className="md:flex items-center justify-between">
                                 <p> <span className="text-xl font-bold">For :</span> <button className="bg-orange-500 px-5 rounded-full font-semibold text-white">{status}</button></p>
                                 <p> <span className="text-xl font-semibold">Price : </span><span className="text-xl font-bold text-orange-600">{price}</span></p>
                             </div>
@@ -42,9 +46,9 @@ const EstateDetails = () => {
 
                             <div>
                                 {facilities && Array.isArray(facilities) && (
-                                    <div className="text-start ml-2 text-[18px] font-semibold flex justify-start">
+                                    <div className="text-start ml-2 text-[18px] font-semibold lg:flex justify-start">
                                         <h1 className='text-xl font-bold'>Facilities :</h1>
-                                        <ul className=" ml-10 flex gap-9">
+                                        <ul className=" ml-10 md:flex gap-9">
                                             {facilities.map((facility, index) => (
                                                 <li key={index} className="flex items-center gap-2"> <FaCircleChevronRight className="text-orange-600"></FaCircleChevronRight> {facility}</li>
                                             ))}
@@ -52,9 +56,9 @@ const EstateDetails = () => {
                                     </div>
                                 )}
                             </div>
-                            <div className='flex items-center gap-4'>
+                            <div className='lg:flex items-center gap-4'>
                                 <h1 className='text-xl font-bold'>You Need To Know :</h1>
-                                <div className="flex gap-9 mt-2">
+                                <div className="flex justify-around gap-9 mt-2">
                                     <p className="flex items-center gap-2"><IoBed className="text-orange-600"></IoBed> <span>{beds} Beds</span></p>
                                     <p className="flex items-center gap-2"> <FaBath className="text-orange-600"></FaBath> <span>{baths}</span> Baths</p>
                                     <p className="flex items-center gap-2"> <BiSolidArea className="text-orange-600"></BiSolidArea>  {area}</p>
