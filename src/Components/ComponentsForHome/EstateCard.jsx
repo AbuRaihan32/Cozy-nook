@@ -3,6 +3,7 @@ import { BiSolidArea } from "react-icons/bi";
 import { FaBath } from "react-icons/fa";
 import { FaCircleChevronRight } from "react-icons/fa6";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const EstateCard = ({ info }) => {
     const { estate_title, price, location, area, facilities, image, status, beds, baths } = info;
@@ -49,7 +50,7 @@ const EstateCard = ({ info }) => {
 
 
                 <div className="card-actions mt-4">
-                    <button className="btn w-full bg-orange-600 rounded-none text-white px-6 hover:bg-orange-700">View Property</button>
+                    <Link to={'/details'} className="btn w-full bg-orange-600 rounded-none text-white px-6 hover:bg-orange-700">View Property</Link>
                 </div>
             </div>
         </div>
