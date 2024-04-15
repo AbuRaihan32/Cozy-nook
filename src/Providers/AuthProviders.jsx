@@ -9,6 +9,7 @@ export const AuthContext = createContext(null);
 const AuthProviders = ({ children }) => {
     const [user, setUser] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [update, setUpdate] = useState(true);
 
 
     // create User 
@@ -40,7 +41,7 @@ const AuthProviders = ({ children }) => {
         return () => {
             unSubscribe();
         }
-    }, [])
+    }, [update])
 
 
 
@@ -50,7 +51,9 @@ const AuthProviders = ({ children }) => {
         createUserByEmail,
         loginUser,
         logOutUser,
-        loading
+        loading,
+        setUpdate,
+        update
     }
 
 
