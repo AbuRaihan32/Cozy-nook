@@ -4,6 +4,8 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { FaEdit } from "react-icons/fa";
 import auth from "../../firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
+import { toast } from 'react-toastify';
+
 
 const UpdateProfile = () => {
     const { user, setUpdate, update } = useContext(AuthContext);
@@ -21,10 +23,10 @@ const UpdateProfile = () => {
         })
         .then(()=>{
             setUpdate(!update)
-            // alert('Profile Updated Successfully')
+            toast.success('Profile Updated Successfully')
         })
         .catch(error =>{
-            console.error(error)
+            toast.error(error.message)
         })
     }
 
@@ -37,7 +39,7 @@ const UpdateProfile = () => {
             <div className="relative card shrink-0 w-[90%] md:w-[70%] lg:w-[50%] mx-auto shadow-2xl bg-base-100">
                 <h1 className="text-3xl text-center pt-7 font-semibold">Your Information</h1>
                 {
-                    isEdit || <div onClick={() => { setIsEdit(true) }} title="Edit" className="absolute right-7 top-6 text-2xl font-semibold border border-orange-600 p-2 rounded-md cursor-pointer">
+                    isEdit || <div onClick={() => { setIsEdit(true) }} title="Edit" className="absolute right-7 top-6 text-2xl font-semibold border border-orange-600 hover:bg-orange-600 hover:text-white p-2 rounded-md cursor-pointer">
                         <FaEdit></FaEdit>
                     </div>
                 }

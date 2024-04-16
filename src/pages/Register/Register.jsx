@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form"
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { toast } from 'react-toastify';
 
 const Register = () => {
     const [show, setShow] = useState(false);
@@ -38,10 +39,10 @@ const Register = () => {
                     .catch(() => { })
                 Navigate('/login')
 
-                console.log(result.user);
+                toast.success('User Created Successfully! Please LogIn For Continue.')
             })
             .catch(error => {
-                console.error(error)
+                toast.error(error.message)
             })
 
     }

@@ -7,6 +7,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { toast } from 'react-toastify';
 
 
 
@@ -15,7 +16,7 @@ const Login = () => {
     const [show, setShow] = useState(false);
     const location = useLocation();
 
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, googleLogIn } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
@@ -28,11 +29,24 @@ const Login = () => {
 
         loginUser(email, password)
             .then(() => {
+                toast.success('login successful')
                 Navigate(location.state ? location.state : '/');
             })
             .catch(error => {
-                console.error(error)
+                toast.error(error.message)
             })
+    }
+
+    // google Login 
+    const googleBtnHandle = () => {
+        googleLogIn()
+        .then(()=>{
+            toast.success('Google Login successful')
+            Navigate(location.state ? location.state : '/');
+        })
+        .catch(error =>{
+            toast.error(error.message)
+        })
     }
 
 
@@ -73,7 +87,7 @@ const Login = () => {
                 <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
             </div>
             <div className="flex justify-center space-x-4">
-                <button aria-label="Log in with Google" className="p-3 rounded-sm">
+                <button onClick={googleBtnHandle} aria-label="Log in with Google" className="p-3 rounded-sm">
                     <FaGoogle></FaGoogle>
                 </button>
                 <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
