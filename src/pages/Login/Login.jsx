@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaGoogle, FaTwitter, FaGithub, FaEye } from "react-icons/fa";
+import { FaGoogle, FaGithub, FaEye, FaFacebook } from "react-icons/fa";
 import { RiEyeCloseFill } from "react-icons/ri";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
@@ -16,7 +16,8 @@ const Login = () => {
     const [show, setShow] = useState(false);
     const location = useLocation();
 
-    const { loginUser, googleLogIn } = useContext(AuthContext);
+    const { loginUser, googleLogIn, githubLogIn, facebookLogIn } = useContext(AuthContext);
+
     const {
         register,
         handleSubmit,
@@ -40,13 +41,36 @@ const Login = () => {
     // google Login 
     const googleBtnHandle = () => {
         googleLogIn()
-        .then(()=>{
-            toast.success('Google Login successful')
-            Navigate(location.state ? location.state : '/');
-        })
-        .catch(error =>{
-            toast.error(error.message)
-        })
+            .then(() => {
+                toast.success('Google Login successful')
+                Navigate(location.state ? location.state : '/');
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
+    }
+    // github Login 
+    const githubBtnHandle = () => {
+        githubLogIn()
+            .then(() => {
+                toast.success('Github Login successful')
+                Navigate(location.state ? location.state : '/');
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
+    }
+
+    // facebook Login 
+    const facebookBtnHandle = () => {
+        facebookLogIn()
+            .then(() => {
+                toast.success('facebook Login successful')
+                Navigate(location.state ? location.state : '/');
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
 
 
@@ -90,10 +114,10 @@ const Login = () => {
                 <button onClick={googleBtnHandle} aria-label="Log in with Google" className="p-3 rounded-sm">
                     <FaGoogle></FaGoogle>
                 </button>
-                <button aria-label="Log in with Twitter" className="p-3 rounded-sm">
-                    <FaTwitter></FaTwitter>
+                <button onClick={facebookBtnHandle} aria-label="Log in with Twitter" className="p-3 rounded-sm">
+                    <FaFacebook></FaFacebook>
                 </button>
-                <button aria-label="Log in with GitHub" className="p-3 rounded-sm">
+                <button onClick={githubBtnHandle} aria-label="Log in with GitHub" className="p-3 rounded-sm">
                     <FaGithub></FaGithub>
                 </button>
             </div>
