@@ -5,7 +5,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
-        <div className="max-w-7xl mx-auto">
+        <div style={{fontFamily: 'Manrope, sans-serif'}} className="max-w-7xl mx-auto">
             <div>
                 <Navbar></Navbar>
             </div>

@@ -5,6 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import auth from "../../firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
 import { toast } from 'react-toastify';
+import { Link } from "react-router-dom";
 
 
 const UpdateProfile = () => {
@@ -13,21 +14,21 @@ const UpdateProfile = () => {
     const [isEdit, setIsEdit] = useState(false);
     const [name, setName] = useState(user.displayName)
     const [photo, setPhotoURL] = useState(user.photoURL)
-    
 
 
-    const HandleSaveChange = () =>{
+
+    const HandleSaveChange = () => {
         setIsEdit(false)
         updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
         })
-        .then(()=>{
-            setUpdate(!update)
-            toast.success('Profile Updated Successfully')
-        })
-        .catch(error =>{
-            toast.error(error.message)
-        })
+            .then(() => {
+                setUpdate(!update)
+                toast.success('Profile Updated Successfully')
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
     }
 
 
@@ -57,7 +58,7 @@ const UpdateProfile = () => {
                             <span className="label-text text-xl font-semibold">Name</span>
                         </label>
                         {
-                            isEdit ? <input onChange={(e)=>{setName(e.target.value)}} type="text" placeholder="" defaultValue={user.displayName} className="input input-bordered pl-7 focus" /> :
+                            isEdit ? <input onChange={(e) => { setName(e.target.value) }} type="text" placeholder="" defaultValue={user.displayName} className="input input-bordered pl-7 focus" /> :
                                 <p className="input input-bordered flex items-center pl-7">{user.displayName}</p>
                         }
                     </div>
@@ -66,13 +67,16 @@ const UpdateProfile = () => {
                             <span className="label-text text-xl font-semibold">Photo URL</span>
                         </label>
                         {
-                            isEdit ? <input onChange={(e)=>{setPhotoURL(e.target.value)}} type="text" placeholder="" defaultValue={user.photoURL ? user.photoURL : 'No Photo URL'} className="input input-bordered pl-7" /> :
+                            isEdit ? <input onChange={(e) => { setPhotoURL(e.target.value) }} type="text" placeholder="" defaultValue={user.photoURL ? user.photoURL : 'No Photo URL'} className="input input-bordered pl-7" /> :
                                 <p className="input input-bordered flex items-center p-3 pl-7">{user.photoURL ? user.photoURL : 'No Photo URL'}</p>
                         }
                     </div>
                     {
                         isEdit && <div onClick={HandleSaveChange} className="form-control mt-6 w-[50%] mx-auto">
-                            <button className="py-3 border border-orange-600 rounded-lg">Save Change</button>
+                            <Link className="relative w-[70%] mx-auto border border-orange-600 inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group">
+                                <span className="h-48 w-full rounded rotate-[-40deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                <span className="relative text-center w-full text-orange-600 transition-colors duration-300 ease-in-out group-hover:text-white">Save Changes</span>
+                            </Link>
                         </div>
                     }
                 </form>

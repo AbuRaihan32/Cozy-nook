@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { RiEye2Line } from "react-icons/ri";
 import { Helmet } from "react-helmet-async";
+import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 
 const Navbar = () => {
     const { user, logOutUser } = useContext(AuthContext);
@@ -14,8 +15,12 @@ const Navbar = () => {
             user && <li><NavLink className={({ isActive }) => isActive ? 'border border-orange-600 hover:bg-orange-200 rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/update'}>Update Profile</NavLink></li>
         }
 
-        <li><NavLink to={'/contact'}>Contact</NavLink></li>
-        <li><NavLink to={'/about'}>About</NavLink></li>
+        {
+            user && <li><NavLink className={({ isActive }) => isActive ? 'border border-orange-600 hover:bg-orange-200 rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/agents'}>Our Agents</NavLink></li>
+        }
+
+        <li><NavLink className={({ isActive }) => isActive ? 'border border-orange-600 hover:bg-orange-200 rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/feedback'}>Feedback Us</NavLink></li>
+
     </>
 
 
@@ -30,7 +35,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 mb-5">
             <Helmet>
                 <title>CozyNook | Login</title>
             </Helmet>
@@ -56,13 +61,19 @@ const Navbar = () => {
                     user ?
                         <>
                             <div title={`${user.displayName}`} className="avatar mr-5">
-                                <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <div className="w-10 rounded-full ring ring-orange-600 ring-offset-base-100 ring-offset-2">
                                     <img src={user?.photoURL ? user.photoURL : '/public/icons8-user.gif'} />
                                 </div>
                             </div>
-                            <button onClick={signOutBtnHandler} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign Out</button>
+                            <button onClick={signOutBtnHandler} className="relative border border-orange-600 inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group">
+                                <span className="h-48 w-[90%] rounded rotate-[-40deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                                <span className="flex items-center gap-2 relative w-full text-orange-600 transition-colors duration-300 ease-in-out group-hover:text-white"> <BiLogOutCircle className="text-xl"></BiLogOutCircle> Sign Out</span>
+                            </button>
                         </> :
-                        <Link to={'/login'} className="btn bg-orange-600 rounded-full text-white px-6 hover:bg-orange-700">Sign In</Link>
+                        <Link to={'/login'} className="relative border border-orange-600 inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group">
+                            <span className="h-48 w-full rounded rotate-[-40deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+                            <span className="flex items-center justify-center gap-2 relative text-center w-full text-orange-600 transition-colors duration-300 ease-in-out group-hover:text-white"> <BiLogInCircle className="text-xl"></BiLogInCircle> Sign In / Register</span>
+                        </Link>
                 }
 
 

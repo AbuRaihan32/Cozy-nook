@@ -14,6 +14,7 @@ import { toast } from 'react-toastify';
 const Login = () => {
     const Navigate = useNavigate()
     const [show, setShow] = useState(false);
+    const [error, setError] = useState('');
     const location = useLocation();
 
     const { loginUser, googleLogIn, githubLogIn, facebookLogIn } = useContext(AuthContext);
@@ -27,6 +28,18 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data;
+        
+        if(!/[A-Z]/.test(password)){
+            return setError('Password must contain an uppercase letter.')
+        }
+
+        if(!/[a-z]/.test(password)){
+            return setError('Password must contain a lowercase letter.')
+        }
+        if(password.length < 6){
+            return setError('Password must be at least 6 character')
+        }
+        setError('')
 
         loginUser(email, password)
             .then(() => {
@@ -92,10 +105,10 @@ const Login = () => {
 
                     <div onClick={() => setShow(!show)} className="absolute right-5 top-[35px] text-xl">
                         {
-                            show ? <FaEye></FaEye> : <RiEyeCloseFill></RiEyeCloseFill>
+                            show ? <RiEyeCloseFill></RiEyeCloseFill> : <FaEye></FaEye>
                         }
                     </div>
-
+                    <p className="text-red-600 font-bold">{error}</p>
 
                     {errors.password && <span className="text-red-500 font-bold">This field is required</span>}
 

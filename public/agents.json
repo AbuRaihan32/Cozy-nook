@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "agent_image": "https://i.postimg.cc/d3VM7jWf/13882015.png",
+      "agent_name": "John Smith",
+      "agent_phone": "+1234567890"
+    },
+    {
+      "id": 2,
+      "agent_image": "https://i.postimg.cc/wxw8CnMY/6590623.webp",
+      "agent_name": "Emily Johnson",
+      "agent_phone": "+1987654321"
+    },
+    {
+      "id": 3,
+      "agent_image": "https://i.postimg.cc/RhskwJyZ/6590631.webp",
+      "agent_name": "Michael Brown",
+      "agent_phone": "+1122334455"
+    },
+    {
+      "id": 4,
+      "agent_image": "https://i.postimg.cc/kXD3qwR6/girl-female-woman-person-people-avatar-icon-230018.png",
+      "agent_name": "Sarah Davis",
+      "agent_phone": "+1555666777"
+    },
+    {
+      "id": 5,
+      "agent_image": "https://i.postimg.cc/mDwf25SM/images.png",
+      "agent_name": "David Wilson",
+      "agent_phone": "+1444333222"
+    },
+    {
+      "id": 6,
+      "agent_image": "https://i.postimg.cc/tCf0TPFr/Woman-Icon-Teen-Profile-Graphics-26722130-1.jpg",
+      "agent_name": "Emma Thompson",
+      "agent_phone": "+1777888999"
+    }
+  ]
+  

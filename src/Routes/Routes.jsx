@@ -7,6 +7,8 @@ import Register from "../pages/Register/Register";
 import PrivateRouts from "../PrivateRouts/PrivateRouts";
 import EstateDetails from "../pages/EstateDetails";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
+import Agents from "../pages/Agents/Agents";
+import FeedBack from "../pages/Feedback/Feedback";
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,15 @@ const router = createBrowserRouter([
             {
                 path: '/update',
                 element: <PrivateRouts><UpdateProfile></UpdateProfile></PrivateRouts>
+            },
+            {
+                path: '/agents',
+                element: <PrivateRouts><Agents></Agents></PrivateRouts>,
+                loader: ()=> fetch('/agents.json')
+            },
+            {
+                path: '/feedback',
+                element: <FeedBack></FeedBack>
             },
             {
                 path: '/register',
