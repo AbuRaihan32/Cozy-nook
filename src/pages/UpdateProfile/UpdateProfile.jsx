@@ -38,7 +38,7 @@ const UpdateProfile = () => {
                 <title>Cozy | UpdateProfile</title>
             </Helmet>
             <div className="relative card shrink-0 w-[90%] md:w-[70%] lg:w-[50%] mx-auto shadow-2xl bg-base-100">
-                <h1 className="text-3xl text-center pt-7 font-semibold">Your Information</h1>
+                <h1 className="text-2xl md:text-3xl text-start pl-7 md:text-center pt-7 font-semibold">Your Information</h1>
                 {
                     isEdit || <div onClick={() => { setIsEdit(true) }} title="Edit" className="absolute right-7 top-6 text-2xl font-semibold border border-orange-600 hover:bg-orange-600 hover:text-white p-2 rounded-md cursor-pointer">
                         <FaEdit></FaEdit>
@@ -68,14 +68,14 @@ const UpdateProfile = () => {
                         </label>
                         {
                             isEdit ? <input onChange={(e) => { setPhotoURL(e.target.value) }} type="text" placeholder="" defaultValue={user.photoURL ? user.photoURL : 'No Photo URL'} className="input input-bordered pl-7" /> :
-                                <p className="input input-bordered flex items-center p-3 pl-7">{user.photoURL ? user.photoURL : 'No Photo URL'}</p>
+                                <input className="input h-fit input-bordered flex items-center p-3 pl-7" value={user.photoURL ? user.photoURL : 'No Photo URL'}></input>
                         }
                     </div>
                     {
-                        isEdit && <div onClick={HandleSaveChange} className="form-control mt-6 w-[50%] mx-auto">
+                        isEdit && <div onClick={HandleSaveChange} className="form-control mt-6 w-[250px] mx-auto">
                             <Link className="relative w-[70%] mx-auto border border-orange-600 inline-flex items-center justify-start px-7 py-2 overflow-hidden font-medium transition-all rounded-full hover:bg-white group">
                                 <span className="h-48 w-full rounded rotate-[-40deg] bg-orange-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-                                <span className="relative text-center w-full text-orange-600 transition-colors duration-300 ease-in-out group-hover:text-white">Save Changes</span>
+                                <span className="relative text-center w-full text-orange-600 transition-colors duration-300 ease-in-out group-hover:text-white">Save</span>
                             </Link>
                         </div>
                     }

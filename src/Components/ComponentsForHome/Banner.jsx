@@ -19,7 +19,7 @@ const Banner = () => {
 
                 {/* slider 1 */}
                 <SwiperSlide
-                    className='bg-no-repeat bg-cover bg-center rounded-3xl' style={{ backgroundImage: 'url(https://i.ibb.co/9wQY2wR/2150799629.jpg)' }}>
+                    className='bg-no-repeat bg-cover bg-center rounded-3xl' style={{ backgroundImage: 'url(https://i.ibb.co/JnkxF6t/outdoor-swimming-pool.jpg)' }}>
                     <div className='flex justify-center items-center h-[calc(100vh-30vh)] text-red-50 bg-black bg-opacity-70 rounded-3xl'>
                         <div className='rounded-3xl text-center'>
                             <h1 className='font-medium text-[18px] mb-2'>THE BEST WAY TO</h1>
@@ -54,7 +54,7 @@ const Banner = () => {
 
                 {/* slider 3 */}
                 <SwiperSlide
-                    className='bg-no-repeat bg-cover bg-center rounded-3xl' style={{ backgroundImage: 'url(https://i.ibb.co/JnkxF6t/outdoor-swimming-pool.jpg)' }}>
+                    className='bg-no-repeat bg-cover bg-center rounded-3xl' style={{ backgroundImage: 'url(https://i.ibb.co/9wQY2wR/2150799629.jpg)' }}>
                     <div className='flex justify-center items-center h-[calc(100vh-30vh)] text-red-50 bg-black bg-opacity-70 rounded-3xl'>
                         <div className='rounded-3xl text-center'>
                             <h1 className='font-medium text-[18px] mb-2'>THE BEST WAY TO</h1>
