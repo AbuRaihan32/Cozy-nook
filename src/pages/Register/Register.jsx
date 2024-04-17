@@ -61,7 +61,7 @@ const Register = () => {
 
 
     return (
-        <div className="w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100 mt-8">
+        <div className="w-[90%] md:w-full max-w-md p-8 space-y-3 rounded-xl mx-auto bg-slate-100 mt-8">
             <Helmet>
                 <title>Cozy | Register</title>
             </Helmet>
