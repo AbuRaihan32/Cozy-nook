@@ -39,6 +39,40 @@ five bullet points features and characteristics:
     8. Feedback: Can any user give us their feedback directly.
 
 
+ To run this application locally:
+ 
+    1. Clone the Repository:
+        First, clone client-side repository to your local machine using Git.
+     
+        git clone https://github.com/diagPulse-client-side/your-repository.git
+        cd your-repository
+
+
+    2. Install Dependencies:
+        Once you have the repository cloned, navigate to the project directory (where package.json is located) using the terminal or command prompt.
+        Run the following command to install the necessary dependencies (this will install all libraries and packages your project needs as specified in package.json):
+        
+        npm install
+
+    3. Add environment variables in ".env.local"
+            VITE_APIKEY= AIzaSyCsAH234Op06ZkC8tyvp9ZmZoZp5B8q3uA
+            VITE_AUTHDOMAIN= th-assignment-8ec1b.firebaseapp.com
+            VITE_PROJECTID= th-assignment-8ec1b
+            VITE_STORAGEBUCKET= th-assignment-8ec1b.appspot.com
+            VITE_MESSAGINGSENDERID= 223116194996
+            VITE_APPID= 1:223116194996:web:11919f7bc9315cdb0493e1
+
+    
+    5. Run the Development Server:
+        After installing dependencies, you can start the development server by running:
+
+        npm run dev
+ 
+ <br/>
+
+The technologies which i have used :
+   1. react.js     2. javaScript    3. tailwind     4. firebase     5. html5    6. css3
+
 
 
 The npm package names which i have used for the challenges task:
