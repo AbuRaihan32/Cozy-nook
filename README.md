@@ -44,7 +44,7 @@ five bullet points features and characteristics:
     1. Clone the Repository:
         First, clone client-side repository to your local machine using Git.
      
-        git clone https://github.com/diagPulse-client-side/your-repository.git
+        git clone https://github.com/Cozy-nook/your-repository.git
         cd your-repository
 
 
@@ -76,9 +76,6 @@ The technologies which i have used :
 
 
 The npm package names which i have used for the challenges task:
-1.
-- [@AOS-Package](https://www.npmjs.com/package/aos) This package I used to animate the Estate section of my home page.
-2.
-- [@React-Hook-form](https://react-hook-form.com/) I have used this package to collect data for my form. It is used in login and register pages.
-3.
-- [@Swiper-slider](https://swiperjs.com/) I have used this package To use the slider on the banner
+1. - [@AOS-Package](https://www.npmjs.com/package/aos) This package I used to animate the Estate section of my home page.
+2. - [@React-Hook-form](https://react-hook-form.com/) I have used this package to collect data for my form. It is used in login and register pages.
+3. - [@Swiper-slider](https://swiperjs.com/) I have used this package To use the slider on the banner
