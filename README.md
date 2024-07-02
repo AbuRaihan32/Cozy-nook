@@ -66,7 +66,7 @@ five bullet points features and characteristics:
     5. Run the Development Server:
         After installing dependencies, you can start the development server by running:
 
-        npm run dev
+        npm run start
  
  <br/>
 
