@@ -1,43 +1,43 @@
+
 # CozyNook 
 It is a very helpful site for buying, selling and renting a house. Which is set with high security.
 
-My Website Live Link is : 
-- [@CozyNook-firebase](https://th-assignment-8ec1b.web.app/) Click Here For Visit live site.
+## Live Site URL
+
+[Visit CozyNook](https://th-assignment-8ec1b.web.app/)
 
 
-bullet points features:
-    
-    1. Secure Authentication: Passwords require complexity, ensuring security.
-    2. Protected Access: Users must log in to update profiles or view property details.
-    3. Enhanced User Interaction: Toast notifications provide real-time feedback on actions.
+## Key features
+- Secure Authentication: Passwords require complexity, ensuring security.
+- Protected Access: Users must log in to update profiles or view property details.
+- Enhanced User Interaction: Toast notifications provide real-time feedback on actions.
 
 
- To run this application locally:
  
-    1. Clone the Repository.
-    2. Install Dependencies:
-        npm install
+## Installation Steps
 
-    3. Add environment variables in ".env.local"
-            VITE_APIKEY= AIzaSyCsAH234Op06ZkC8tyvp9ZmZoZp5B8q3uA
-            VITE_AUTHDOMAIN= th-assignment-8ec1b.firebaseapp.com
-            VITE_PROJECTID= th-assignment-8ec1b
-            VITE_STORAGEBUCKET= th-assignment-8ec1b.appspot.com
-            VITE_MESSAGINGSENDERID= 223116194996
-            VITE_APPID= 1:223116194996:web:11919f7bc9315cdb0493e1
-
-    
-    5. Run the Development Server:
-        npm run start
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/AbuRaihan32/Cozy-nook.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd folder-name
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
  
  <br/>
 
-The technologies which i have used :
+## used technologies:
    1. react.js     2. javaScript    3. tailwind     4. firebase     5. html5    6. css3
 
 
-
-The npm package names which i have used for the challenges task:
+## used npm packages:
 1. - [@AOS-Package](https://www.npmjs.com/package/aos) 
 2. - [@React-Hook-form](https://react-hook-form.com/) 
 3. - [@Swiper-slider](https://swiperjs.com/)
+
+Thank you for exploring CozyNook! Enjoy using the platform.
