@@ -1,12 +1,8 @@
 # CozyNook 
 It is a very helpful site for buying, selling and renting a house. Which is set with high security.
 
-My Website Firebase Live Link is : 
+My Website Live Link is : 
 - [@CozyNook-firebase](https://th-assignment-8ec1b.web.app/) Click Here For Visit live site.
-
-My Website Netlify Live Link is : 
-- [@CozyNook-firebase](https://9th-assign-ar-mahfuz-32.netlify.app/) Click Here For Visit live site.
-
 
 
 bullet points features:
